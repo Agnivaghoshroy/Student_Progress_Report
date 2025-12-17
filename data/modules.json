@@ -1,0 +1,115 @@
+[
+  {
+    "id": "module_1",
+    "title": "Introduction to Web Development",
+    "description": "Learn the basics of HTML, CSS, and JavaScript",
+    "hasVideo": true,
+    "hasPdf": true,
+    "hasQuiz": true,
+    "videoUrl": "/assets/Sample_Video_For_Video watch percentage module.mp4",
+    "pdfUrl": "/assets/Sample_PDF_For_Reading material engagement module.pdf",
+    "quiz": [
+      {
+        "question": "What does HTML stand for?",
+        "options": [
+          "Hyper Text Markup Language",
+          "High Tech Modern Language",
+          "Home Tool Markup Language",
+          "Hyperlinks and Text Markup Language"
+        ],
+        "correct": 0,
+        "hint": "HTML is used to create the structure of web pages. Think about what 'markup' means in web development."
+      },
+      {
+        "question": "Which tag is used for creating a paragraph?",
+        "options": [
+          "<p>",
+          "<para>",
+          "<pg>",
+          "<paragraph>"
+        ],
+        "correct": 0,
+        "hint": "The tag is a single letter that stands for 'paragraph'."
+      },
+      {
+        "question": "CSS stands for?",
+        "options": [
+          "Computer Style Sheets",
+          "Cascading Style Sheets",
+          "Creative Style Sheets",
+          "Colorful Style Sheets"
+        ],
+        "correct": 1,
+        "hint": "CSS uses a 'cascade' to apply styles from general to specific rules."
+      }
+    ]
+  },
+  {
+    "id": "module_2",
+    "title": "JavaScript Fundamentals",
+    "description": "Master JavaScript variables, functions, and DOM manipulation",
+    "hasVideo": true,
+    "hasPdf": true,
+    "hasQuiz": true,
+    "videoUrl": "/assets/Sample_Video_For_Video watch percentage module.mp4",
+    "pdfUrl": "/assets/Sample_PDF_For_Reading material engagement module.pdf",
+    "quiz": [
+      {
+        "question": "Which keyword is used to declare a variable in JavaScript?",
+        "options": [
+          "var",
+          "let",
+          "const",
+          "All of the above"
+        ],
+        "correct": 3,
+        "hint": "JavaScript has multiple ways to declare variables: var (old way), let (block-scoped), and const (constant)."
+      },
+      {
+        "question": "What is the correct way to write a JavaScript array?",
+        "options": [
+          "var colors = 'red', 'green', 'blue'",
+          "var colors = (1:'red', 2:'green', 3:'blue')",
+          "var colors = ['red', 'green', 'blue']",
+          "var colors = 1 = ('red'), 2 = ('green'), 3 = ('blue')"
+        ],
+        "correct": 2,
+        "hint": "Arrays in JavaScript use square brackets [] to hold multiple values."
+      }
+    ]
+  },
+  {
+    "id": "module_3",
+    "title": "Backend Development with Node.js",
+    "description": "Build server-side applications with Node.js and Express",
+    "hasVideo": true,
+    "hasPdf": true,
+    "hasQuiz": true,
+    "videoUrl": "/assets/Sample_Video_For_Video watch percentage module.mp4",
+    "pdfUrl": "/assets/Sample_PDF_For_Reading material engagement module.pdf",
+    "quiz": [
+      {
+        "question": "What is Node.js?",
+        "options": [
+          "A JavaScript framework",
+          "A JavaScript runtime",
+          "A database",
+          "A web browser"
+        ],
+        "correct": 1,
+        "hint": "Node.js allows JavaScript to run outside the browser - it's an environment or 'runtime' for executing JavaScript."
+      },
+      {
+        "question": "Which module is used to create a web server in Node.js?",
+        "options": [
+          "fs",
+          "http",
+          "path",
+          "url"
+        ],
+        "correct": 1,
+        "hint": "Think about the protocol used for web communication - HTTP. Node.js has a built-in module named after it."
+      }
+    ]
+  }
+]

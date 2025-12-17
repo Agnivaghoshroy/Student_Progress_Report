@@ -1,0 +1,55 @@
+{
+  "studentId": "student_001",
+  "studentName": "John Doe",
+  "modules": [
+    {
+      "moduleId": "module_1",
+      "status": "completed",
+      "videoProgress": 100,
+      "pdfProgress": 100,
+      "quizScore": {
+        "score": 3,
+        "totalQuestions": 3,
+        "percentage": 100,
+        "attempt": 1,
+        "answers": [
+          0,
+          0,
+          1
+        ]
+      },
+      "quizAttempts": 1,
+      "timeSpent": 269.54400000000004,
+      "visits": 222,
+      "lastVisit": "2025-12-16T19:25:54.664Z",
+      "startedAt": "2025-12-16T19:21:29.252Z",
+      "completedAt": "2025-12-16T19:25:54.664Z"
+    },
+    {
+      "moduleId": "module_2",
+      "status": "in-progress",
+      "videoProgress": 1.6370506802644382,
+      "pdfProgress": 20,
+      "quizScore": null,
+      "quizAttempts": 0,
+      "timeSpent": 89.53000000000002,
+      "visits": 16,
+      "lastVisit": "2025-12-17T05:19:12.962Z",
+      "startedAt": "2025-12-17T03:33:17.146Z",
+      "completedAt": null
+    },
+    {
+      "moduleId": "module_3",
+      "status": "not-started",
+      "videoProgress": 0,
+      "pdfProgress": 0,
+      "quizScore": null,
+      "quizAttempts": 0,
+      "timeSpent": 0,
+      "visits": 0,
+      "lastVisit": null,
+      "startedAt": null,
+      "completedAt": null
+    }
+  ]
+}

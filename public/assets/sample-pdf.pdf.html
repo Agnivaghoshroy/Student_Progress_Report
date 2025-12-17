@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Material - Web Development Basics</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #f5f5f5;
+        }
+        .document {
+            background: white;
+            padding: 60px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #7f8c8d;
+        }
+        p {
+            color: #333;
+            text-align: justify;
+        }
+        .code-block {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+        }
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .page-break {
+            page-break-after: always;
+            margin: 40px 0;
+            border-bottom: 1px dashed #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="document">
+        <h1>📖 Web Development Fundamentals</h1>
+        <p><em>Complete Learning Guide for Beginners</em></p>
+
+        <h2>1. Introduction to Web Development</h2>
+        <p>
+            Web development is the process of building and maintaining websites. It encompasses everything from 
+            creating simple static pages to complex web applications, social network services, and electronic 
+            business applications. Web development can be divided into two main categories: 
+            <span class="highlight">frontend development</span> and <span class="highlight">backend development</span>.
+        </p>
+
+        <h3>1.1 Frontend Development</h3>
+        <p>
+            Frontend development refers to everything that users interact with directly in their web browser. 
+            This includes the layout, design, and interactivity of a website. The three core technologies used 
+            in frontend development are HTML, CSS, and JavaScript.
+        </p>
+
+        <div class="code-block">
+            &lt;!DOCTYPE html&gt;<br>
+            &lt;html&gt;<br>
+            &nbsp;&nbsp;&lt;head&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;My First Page&lt;/title&gt;<br>
+            &nbsp;&nbsp;&lt;/head&gt;<br>
+            &nbsp;&nbsp;&lt;body&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Hello World!&lt;/h1&gt;<br>
+            &nbsp;&nbsp;&lt;/body&gt;<br>
+            &lt;/html&gt;
+        </div>
+
+        <div class="page-break"></div>
+
+        <h2>2. HTML - HyperText Markup Language</h2>
+        <p>
+            HTML is the standard markup language for creating web pages. It describes the structure of web pages 
+            using markup. HTML elements are the building blocks of HTML pages and are represented by tags.
+        </p>
+
+        <h3>2.1 Basic HTML Structure</h3>
+        <p>
+            Every HTML document follows a standard structure that includes the document type declaration, 
+            an html element, a head section for metadata, and a body section for content. Understanding this 
+            structure is fundamental to creating well-formed web pages.
+        </p>
+
+        <h3>2.2 Common HTML Elements</h3>
+        <p>
+            HTML provides numerous elements for different purposes: headings (h1-h6), paragraphs (p), 
+            links (a), images (img), lists (ul, ol, li), and divisions (div). Each element serves a 
+            specific purpose in structuring your content semantically.
+        </p>
+
+        <div class="page-break"></div>
+
+        <h2>3. CSS - Cascading Style Sheets</h2>
+        <p>
+            CSS is used to style and layout web pages. It allows you to change colors, fonts, spacing, 
+            and much more. CSS works by selecting HTML elements and applying styles to them through 
+            a set of properties and values.
+        </p>
+
+        <h3>3.1 CSS Selectors</h3>
+        <p>
+            Selectors are patterns used to select the elements you want to style. The most common types 
+            include element selectors, class selectors (.), ID selectors (#), and attribute selectors. 
+            Understanding selectors is crucial for effective styling.
+        </p>
+
+        <div class="code-block">
+            /* Element selector */<br>
+            p { color: blue; }<br><br>
+            /* Class selector */<br>
+            .highlight { background-color: yellow; }<br><br>
+            /* ID selector */<br>
+            #header { font-size: 24px; }
+        </div>
+
+        <h3>3.2 The Box Model</h3>
+        <p>
+            The CSS box model describes the rectangular boxes generated for elements in the document tree. 
+            Each box has content, padding, border, and margin areas. Understanding the box model is essential 
+            for creating layouts and controlling spacing.
+        </p>
+
+        <div class="page-break"></div>
+
+        <h2>4. JavaScript Basics</h2>
+        <p>
+            JavaScript is a programming language that enables interactive web pages. It allows you to 
+            implement complex features like updating content dynamically, animating images, controlling 
+            multimedia, and much more. JavaScript is the third layer of the web development cake.
+        </p>
+
+        <h3>4.1 Variables and Data Types</h3>
+        <p>
+            JavaScript variables can be declared using var, let, or const. Each has different scoping rules. 
+            JavaScript supports various data types including numbers, strings, booleans, objects, and arrays. 
+            Understanding data types is fundamental to writing effective JavaScript code.
+        </p>
+
+        <div class="code-block">
+            let name = "John Doe";<br>
+            const age = 25;<br>
+            var isStudent = true;
+        </div>
+
+        <h3>4.2 Functions</h3>
+        <p>
+            Functions are reusable blocks of code that perform specific tasks. They can accept parameters 
+            and return values. Functions are one of the fundamental building blocks in JavaScript and are 
+            essential for organizing and reusing code.
+        </p>
+
+        <div class="page-break"></div>
+
+        <h2>5. Web Development Best Practices</h2>
+        <p>
+            Following best practices ensures your code is maintainable, accessible, and performs well. 
+            This includes writing semantic HTML, organizing CSS efficiently, following JavaScript naming 
+            conventions, and ensuring your sites are responsive and accessible.
+        </p>
+
+        <h3>5.1 Semantic HTML</h3>
+        <p>
+            Using semantic HTML means using HTML elements for their intended purpose. This makes your 
+            content more accessible to screen readers and helps search engines understand your content better. 
+            Examples include using &lt;nav&gt; for navigation, &lt;article&gt; for articles, and 
+            &lt;aside&gt; for sidebars.
+        </p>
+
+        <h3>5.2 Responsive Design</h3>
+        <p>
+            Responsive design ensures your website works well on all devices and screen sizes. This is 
+            achieved through fluid grids, flexible images, and CSS media queries. With the increasing 
+            variety of devices accessing the web, responsive design has become essential.
+        </p>
+
+        <div class="page-break"></div>
+
+        <h2>6. Conclusion</h2>
+        <p>
+            Web development is an exciting and constantly evolving field. By mastering HTML, CSS, and 
+            JavaScript, you'll have the foundation needed to create modern, interactive websites. 
+            Continue practicing, building projects, and staying updated with new technologies to grow 
+            as a web developer.
+        </p>
+
+        <p style="margin-top: 40px; text-align: center; color: #7f8c8d;">
+            <em>End of Document - Thank you for reading!</em>
+        </p>
+    </div>
+</body>
+</html>

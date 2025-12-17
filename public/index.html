@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Progress Tracking Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .progress-ring {
+            transform: rotate(-90deg);
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .wave-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 50 Q 25 25, 50 50 T 100 50' stroke='white' stroke-width='2' fill='none' opacity='0.3'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <!-- Login Page -->
+    <div id="loginPage" class="min-h-screen flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl shadow-2xl overflow-hidden max-w-6xl w-full flex flex-col md:flex-row">
+            <!-- Left Side - Welcome Section -->
+            <div class="md:w-1/2 bg-gradient-to-br from-purple-600 via-purple-500 to-indigo-600 p-12 flex flex-col justify-center text-white relative overflow-hidden wave-pattern">
+                <!-- Decorative Elements -->
+                <div class="absolute top-8 left-8 w-16 h-16 border-2 border-white rounded-full opacity-30"></div>
+                <div class="absolute top-20 right-12 w-8 h-8 bg-white rounded-full opacity-20"></div>
+                <div class="absolute bottom-32 left-16 w-12 h-12 border-2 border-white rotate-45 opacity-25"></div>
+                <div class="absolute top-1/2 right-8 w-4 h-4 bg-white rounded-full opacity-30"></div>
+                
+                <!-- Wave decoration -->
+                <div class="absolute left-0 top-0 w-full h-full opacity-10">
+                    <svg class="w-full h-full" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0,50 Q50,20 100,50 T200,50 L200,0 L0,0 Z" fill="white"/>
+                        <path d="M0,100 Q50,70 100,100 T200,100 L200,200 L0,200 Z" fill="white"/>
+                    </svg>
+                </div>
+                
+                <div class="relative z-10">
+                    <div class="mb-8">
+                        <i class="fas fa-graduation-cap text-6xl mb-4 opacity-90"></i>
+                    </div>
+                    <h2 class="text-4xl font-bold mb-4">Welcome back!</h2>
+                    <p class="text-lg opacity-90 mb-8">You can sign in to access your existing account and continue your learning journey.</p>
+                    
+                    <div class="space-y-4 opacity-80">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle mr-3 text-xl"></i>
+                            <span>Track your learning progress</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle mr-3 text-xl"></i>
+                            <span>Complete modules and quizzes</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle mr-3 text-xl"></i>
+                            <span>Achieve your learning goals</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Side - Login Form -->
+            <div class="md:w-1/2 p-12 flex flex-col justify-center">
+                <div class="max-w-md w-full mx-auto">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-8">Sign In</h3>
+                    
+                    <form id="loginForm" class="space-y-6">
+                        <div>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                                <input type="text" id="loginUsername" placeholder="Username or email" 
+                                    class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                                <input type="password" id="loginPassword" placeholder="Password" 
+                                    class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition">
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <label class="flex items-center">
+                                <input type="checkbox" id="rememberMe" class="w-4 h-4 text-purple-600 border-gray-300 rounded focus:ring-purple-500">
+                                <span class="ml-2 text-sm text-gray-600">Remember me</span>
+                            </label>
+                            <a href="#" class="text-sm text-purple-600 hover:text-purple-700">Forgot password?</a>
+                        </div>
+                        
+                        <button type="submit" 
+                            class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition font-semibold text-lg">
+                            Sign In
+                        </button>
+                        
+                        <p class="text-center text-sm text-gray-600 mt-6">
+                            New here? <a href="#" class="text-purple-600 hover:text-purple-700 font-semibold">Create an Account</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navigation -->
+    <nav id="mainNav" class="bg-white shadow-lg hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <i class="fas fa-graduation-cap text-3xl text-indigo-600 mr-3"></i>
+                    <h1 class="text-2xl font-bold text-gray-800">Student Progress Tracker</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="text-gray-600" id="studentName">Loading...</span>
+                    <button onclick="showDashboard()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition">
+                        <i class="fas fa-chart-line mr-2"></i>Dashboard
+                    </button>
+                    <button onclick="resetProgress()" class="bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-yellow-600 transition">
+                        <i class="fas fa-redo mr-2"></i>Reset Progress
+                    </button>
+                    <button onclick="logout()" class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition">
+                        <i class="fas fa-sign-out-alt mr-2"></i>Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div id="mainContent" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 hidden">
+        <!-- Dashboard View -->
+        <div id="dashboardView" class="fade-in">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Your Learning Dashboard</h2>
+            
+            <!-- Overall Progress Card -->
+            <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-semibold text-gray-700">Overall Progress</h3>
+                    <div class="text-3xl font-bold text-indigo-600" id="overallProgress">0%</div>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-4">
+                    <div id="overallProgressBar" class="bg-gradient-to-r from-indigo-500 to-purple-600 h-4 rounded-full transition-all duration-500" style="width: 0%"></div>
+                </div>
+                <div class="grid grid-cols-4 gap-4 mt-6">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-green-600" id="completedModules">0</div>
+                        <div class="text-sm text-gray-600">Completed</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-yellow-600" id="inProgressModules">0</div>
+                        <div class="text-sm text-gray-600">In Progress</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-indigo-600" id="totalTimeSpent">0h</div>
+                        <div class="text-sm text-gray-600">Time Spent</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-purple-600" id="avgQuizScore">0%</div>
+                        <div class="text-sm text-gray-600">Avg Quiz Score</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modules Grid -->
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Your Modules</h3>
+            <div id="modulesList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Module cards will be inserted here -->
+            </div>
+        </div>
+
+        <!-- Module Detail View -->
+        <div id="moduleView" class="hidden fade-in">
+            <button onclick="showDashboard()" class="mb-6 text-indigo-600 hover:text-indigo-800 flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i>Back to Dashboard
+            </button>
+            
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <h2 id="moduleTitle" class="text-3xl font-bold text-gray-800 mb-2"></h2>
+                <p id="moduleDescription" class="text-gray-600 mb-6"></p>
+                
+                <!-- Progress Indicators -->
+                <div class="grid grid-cols-3 gap-4 mb-8">
+                    <div class="bg-blue-50 rounded-lg p-4 text-center">
+                        <div class="text-3xl font-bold text-blue-600" id="moduleVideoProgress">0%</div>
+                        <div class="text-sm text-gray-600">Video Progress</div>
+                    </div>
+                    <div class="bg-green-50 rounded-lg p-4 text-center">
+                        <div class="text-3xl font-bold text-green-600" id="modulePdfProgress">0%</div>
+                        <div class="text-sm text-gray-600">Reading Progress</div>
+                    </div>
+                    <div class="bg-purple-50 rounded-lg p-4 text-center">
+                        <div class="text-3xl font-bold text-purple-600" id="moduleQuizScore">-</div>
+                        <div class="text-sm text-gray-600">Quiz Score</div>
+                    </div>
+                </div>
+
+                <!-- Tabs -->
+                <div class="border-b border-gray-200 mb-6">
+                    <nav class="flex space-x-8">
+                        <button onclick="switchTab('video')" id="videoTab" class="tab-button py-4 px-1 border-b-2 border-indigo-600 font-medium text-indigo-600">
+                            <i class="fas fa-video mr-2"></i>Video
+                        </button>
+                        <button onclick="switchTab('pdf')" id="pdfTab" class="tab-button py-4 px-1 border-b-2 border-transparent font-medium text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-file-pdf mr-2"></i>Reading Material
+                        </button>
+                        <button onclick="switchTab('quiz')" id="quizTab" class="tab-button py-4 px-1 border-b-2 border-transparent font-medium text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-question-circle mr-2"></i>Quiz
+                        </button>
+                    </nav>
+                </div>
+
+                <!-- Tab Content -->
+                <div id="tabContent">
+                    <!-- Content will be dynamically loaded -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
